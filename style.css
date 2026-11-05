@@ -1,296 +1,416 @@
-
+/* إعدادات شاملة */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-    background: #080D18;
-    color: white;
+    background-color: #070c18;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* NAVBAR */
-
+/* شريط التنقل العلوي */
 .navbar {
-    height: 85px;
-    padding: 0 8%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background: #080D18;
+    align-items: center;
+    padding: 16px 40px;
+    background-color: #0d1527;
+    border-bottom: 1px solid #1e293b;
 }
 
-.logo {
-    font-size: 27px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.logo span,
-footer span {
-    color: #E63946;
-}
-
-nav {
-    display: flex;
-    gap: 35px;
-}
-
-nav a {
-    color: #BBC5D5;
-    text-decoration: none;
-    font-size: 13px;
-    transition: .3s;
-}
-
-nav a:hover {
-    color: #E63946;
-}
-
-.nav-btn {
-    padding: 12px 23px;
-    background: #E63946;
-    border-radius: 5px;
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
-}
-
-/* HERO */
-
-.hero {
-    min-height: 650px;
-    position: relative;
+.logo-container {
     display: flex;
     align-items: center;
-    padding: 0 10%;
-    background-image:
-        url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=2000");
-    background-size: cover;
-    background-position: center;
+    gap: 8px;
 }
 
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        90deg,
-        rgba(5,10,20,.97),
-        rgba(5,10,20,.65),
-        rgba(5,10,20,.25)
-    );
+.cloud-icon {
+    color: #38bdf8;
+    font-size: 28px;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 600px;
-}
-
-.tag {
-    color: #E63946;
-    letter-spacing: 4px;
-    font-size: 11px;
+.brand-name {
     font-weight: 700;
+    font-size: 20px;
+    color: #38bdf8;
 }
 
-.hero h1 {
-    font-size: 65px;
-    line-height: 1.2;
-    margin: 25px 0;
+.nav-center {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.nav-item.active, .nav-item:hover {
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+.nav-item .material-icons {
+    font-size: 18px;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #1e293b;
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+
+.theme-toggle .material-icons {
+    font-size: 18px;
+    color: #94a3b8;
+}
+
+.theme-toggle .sun {
+    color: #fbbf24;
+}
+
+.toggle-switch {
+    width: 32px;
+    height: 18px;
+    background-color: #3b82f6;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-knob {
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 16px;
+}
+
+/* قسم الترحيب (Hero Section) */
+.hero-section {
+    position: relative;
+    padding: 50px 40px 40px 40px;
+    background: linear-gradient(to right, rgba(7, 12, 24, 0.95) 30%, rgba(7, 12, 24, 0.4)), 
+                url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+}
+
+.hero-content h1 {
+    font-size: 38px;
     font-weight: 800;
-}
-
-.hero h1 span {
-    color: #70B7FF;
+    margin-bottom: 10px;
+    color: #ffffff;
 }
 
 .hero-content p {
-    color: #C3CCDA;
+    color: #94a3b8;
     font-size: 15px;
-    line-height: 1.8;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
-.main-btn {
-    display: inline-block;
-    background: #E63946;
-    color: white;
-    padding: 16px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: .3s;
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    padding: 10px 20px;
+    max-width: 450px;
+    gap: 10px;
 }
 
-.main-btn:hover {
-    background: #B82030;
-    transform: translateY(-3px);
+.search-box .material-icons {
+    color: #64748b;
+    font-size: 20px;
 }
 
-.location {
-    position: absolute;
-    z-index: 2;
-    right: 10%;
-    bottom: 55px;
-    text-align: right;
-}
-
-.location span {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #70B7FF;
-}
-
-.location h2 {
-    font-size: 55px;
-    margin: 8px 0;
-}
-
-.location p {
-    color: #CCD5E3;
-}
-
-/* WEATHER */
-
-.weather-section {
-    padding: 100px 10%;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 55px;
-}
-
-.section-title span {
-    color: #E63946;
-    letter-spacing: 4px;
-    font-size: 11px;
-    font-weight: 700;
-}
-
-.section-title h2 {
-    font-size: 38px;
-    margin: 15px 0;
-}
-
-.section-title h2 b {
-    color: #70B7FF;
-}
-
-.section-title p {
-    color: #8796AC;
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #0f172a;
     font-size: 14px;
+    width: 100%;
 }
 
-.weather-grid {
+/* التنسيق العام للتخطيط (Grid) */
+.main-container {
+    flex: 1;
+    padding: 30px 40px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 30px;
+}
+
+/* قسم المدن */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+}
+
+.pin-icon {
+    color: #3b82f6;
+}
+
+.see-all {
+    color: #3b82f6;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+    gap: 20px;
 }
 
-.weather-card {
-    background: linear-gradient(145deg, #14243D, #0C1526);
-    border: 1px solid #253B5B;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    transition: .3s;
+/* تصميم كروت المدن (City Cards) */
+.city-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, border-color 0.2s;
 }
 
-.weather-card:hover {
-    transform: translateY(-8px);
-    border-color: #E63946;
+.city-card:hover {
+    transform: translateY(-2px);
+    border-color: #334155;
 }
 
-.weather-card span {
-    font-size: 38px;
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
 }
 
-.weather-card h3 {
-    margin-top: 18px;
-    color: #BBCBE1;
-    font-size: 17px;
+.card-top h3 {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
 }
 
-.weather-card h2 {
-    font-size: 35px;
-    margin: 12px 0;
-    color: #70B7FF;
-}
-
-.weather-card p {
-    color: #899CB8;
-    font-size: 13px;
-}
-
-/* FOOTER */
-
-footer {
-    background: #050912;
-    text-align: center;
-    padding: 40px;
-    border-top: 1px solid #1D2C42;
-}
-
-footer h2 {
-    letter-spacing: 3px;
-    margin-bottom: 12px;
-}
-
-footer p {
-    color: #8492A8;
+.region {
     font-size: 12px;
+    color: #64748b;
+    display: block;
+    margin-top: 2px;
 }
 
-/* RESPONSIVE */
+.star-icon {
+    color: #64748b;
+    font-size: 20px;
+    cursor: pointer;
+}
 
-@media (max-width: 768px) {
+.weather-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 8px;
+}
 
-    .navbar {
-        padding: 0 5%;
-    }
+.weather-icon {
+    font-size: 42px;
+    color: #e2e8f0;
+}
 
-    nav {
-        display: none;
-    }
+.sun-color {
+    color: #fbbf24 !important;
+}
 
-    .hero {
-        min-height: 650px;
-        padding: 0 7%;
-    }
+.rain-color {
+    color: #38bdf8 !important;
+}
 
-    .hero h1 {
-        font-size: 43px;
-    }
+.temp {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+}
 
-    .location {
-        right: 7%;
-        bottom: 25px;
-    }
+.desc {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 15px;
+}
 
-    .weather-section {
-        padding: 70px 6%;
-    }
+.min-max {
+    font-size: 12px;
+    color: #94a3b8;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 12px;
+}
 
-    .weather-grid {
+/* الشريط الجانبي (Sidebar) */
+.detail-card {
+    background: linear-gradient(180deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.detail-header h3 {
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.detail-main-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.detail-main-icon {
+    font-size: 64px;
+    color: #fbbf24;
+}
+
+.big-temp {
+    font-size: 44px;
+    font-weight: 800;
+    color: #ffffff;
+    display: block;
+    line-height: 1;
+}
+
+.weather-status {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-top: 6px;
+    display: block;
+}
+
+.detail-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.stat-row span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-row .material-icons {
+    font-size: 18px;
+    color: #38bdf8;
+}
+
+.stat-row strong {
+    color: #ffffff;
+}
+
+.forecast-section h4 {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.forecast-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.forecast-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.forecast-item strong {
+    color: #ffffff;
+}
+
+/* الفوتر */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #070c18;
+    border-top: 1px solid #1e293b;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.footer-center {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.heart-icon {
+    font-size: 14px;
+    color: #ef4444;
+}
+
+/* تجاوب الشاشة (Responsive) */
+@media (max-width: 1100px) {
+    .cards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .section-title h2 {
-        font-size: 28px;
-    }
 }
 
-@media (max-width: 450px) {
-    .weather-grid {
+@media (max-width: 850px) {
+    .content-grid {
         grid-template-columns: 1fr;
     }
-
-    .nav-btn {
-        padding: 10px 13px;
+    .cards-grid {
+        grid-template-columns: 1fr;
     }
 }

@@ -1,119 +1,295 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FYOURM | France Weather</title>
+    <title>FyourM - Météo France</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- أيقونات Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
 <body>
 
-<header class="navbar">
-    <div class="logo">FYOURM<span>.</span></div>
-
-    <nav>
-        <a href="#">Accueil</a>
-        <a href="#weather">Météo</a>
-        <a href="#cities">Villes</a>
-        <a href="#about">À propos</a>
-    </nav>
-
-    <a href="#weather" class="nav-btn">Explorer</a>
-</header>
-
-<section class="hero">
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-        <span class="tag">FRANCE WEATHER EXPERIENCE</span>
-
-        <h1>Discover The<br>
-            <span>Weather</span> In France.
-        </h1>
-
-        <p>
-            Explore weather conditions across France.
-            Stay informed, wherever you go.
-        </p>
-
-        <a href="#weather" class="main-btn">
-            Explore Weather →
-        </a>
-    </div>
-
-    <div class="location">
-        <span>📍 PARIS, FRANCE</span>
-        <h2>18°</h2>
-        <p>Partly Cloudy</p>
-    </div>
-
-</section>
-
-<section class="weather-section" id="weather">
-
-    <div class="section-title">
-        <span>LIVE WEATHER</span>
-        <h2>Weather <b>Dashboard</b></h2>
-        <p>Discover the weather in French cities.</p>
-    </div>
-
-    <div class="weather-grid">
-
-        <div class="weather-card">
-            <span>☀️</span>
-            <h3>Paris</h3>
-            <h2>18°C</h2>
-            <p>Sunny</p>
+    <!-- شريط التنقل العلوي -->
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo-container">
+                <span class="material-icons cloud-icon">cloud</span>
+                <span class="brand-name">FyourM</span>
+            </div>
         </div>
-
-        <div class="weather-card">
-            <span>🌧️</span>
-            <h3>Lyon</h3>
-            <h2>14°C</h2>
-            <p>Rainy</p>
+        <nav class="nav-center">
+            <a href="#" class="nav-item active"><span class="material-icons">home</span> Accueil</a>
+            <a href="#" class="nav-item"><span class="material-icons">star</span> Favoris</a>
+            <a href="#" class="nav-item"><span class="material-icons">settings</span> Paramètres</a>
+        </nav>
+        <div class="nav-right">
+            <div class="theme-toggle">
+                <span class="material-icons sun">wb_sunny</span>
+                <div class="toggle-switch active">
+                    <div class="toggle-knob"></div>
+                </div>
+                <span class="material-icons moon">dark_mode</span>
+            </div>
         </div>
+    </header>
 
-        <div class="weather-card">
-            <span>☀️</span>
-            <h3>Marseille</h3>
-            <h2>23°C</h2>
-            <p>Sunny</p>
+    <!-- المحتوى الرئيسي -->
+    <main class="main-container">
+        
+        <!-- قسم الترحيب (Hero Section) -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>La météo en France</h1>
+                <p>Découvrez la météo actuelle et les prévisions de toutes les villes françaises.</p>
+                <div class="search-box">
+                    <span class="material-icons">search</span>
+                    <input type="text" placeholder="Rechercher une ville...">
+                </div>
+            </div>
+        </section>
+
+        <!-- شبكة المحتوى (المدن واللوحة الجانبية) -->
+        <div class="content-grid">
+            
+            <!-- العمود الأيسر: المدن الأكثر شعبية -->
+            <div class="cities-column">
+                <div class="section-header">
+                    <h2><span class="material-icons pin-icon">place</span> Villes populaires</h2>
+                    <span class="see-all">Voir toutes les villes &rarr;</span>
+                </div>
+
+                <div class="cards-grid">
+                    <!-- كارت 1: Paris -->
+                    <div class="city-card">
+                        <div class="card-top">
+                            <div>
+                                <h3>Paris</h3>
+                                <span class="region">Île-de-France</span>
+                            </div>
+                            <span class="material-icons star-icon">star_border</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="weather-info">
+                                <span class="material-icons weather-icon">wb_cloudy</span>
+                                <div class="temp-display">
+                                    <span class="temp">18°C</span>
+                                </div>
+                            </div>
+                            <p class="desc">Peu nuageux</p>
+                            <div class="min-max">
+                                <span>Min 12°</span> / <span>Max 21°</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- كارت 2: Marseille -->
+                    <div class="city-card">
+                        <div class="card-top">
+                            <div>
+                                <h3>Marseille</h3>
+                                <span class="region">Provence-Alpes-Côte d'Azur</span>
+                            </div>
+                            <span class="material-icons star-icon">star_border</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="weather-info">
+                                <span class="material-icons weather-icon sun-color">wb_sunny</span>
+                                <div class="temp-display">
+                                    <span class="temp">22°C</span>
+                                </div>
+                            </div>
+                            <p class="desc">Ensoleillé</p>
+                            <div class="min-max">
+                                <span>Min 16°</span> / <span>Max 26°</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- كارت 3: Lyon -->
+                    <div class="city-card">
+                        <div class="card-top">
+                            <div>
+                                <h3>Lyon</h3>
+                                <span class="region">Auvergne-Rhône-Alpes</span>
+                            </div>
+                            <span class="material-icons star-icon">star_border</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="weather-info">
+                                <span class="material-icons weather-icon rain-color">grain</span>
+                                <div class="temp-display">
+                                    <span class="temp">15°C</span>
+                                </div>
+                            </div>
+                            <p class="desc">Pluie légère</p>
+                            <div class="min-max">
+                                <span>Min 10°</span> / <span>Max 18°</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- كارت 4: Bordeaux -->
+                    <div class="city-card">
+                        <div class="card-top">
+                            <div>
+                                <h3>Bordeaux</h3>
+                                <span class="region">Nouvelle-Aquitaine</span>
+                            </div>
+                            <span class="material-icons star-icon">star_border</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="weather-info">
+                                <span class="material-icons weather-icon sun-color">wb_sunny</span>
+                                <div class="temp-display">
+                                    <span class="temp">20°C</span>
+                                </div>
+                            </div>
+                            <p class="desc">Ensoleillé</p>
+                            <div class="min-max">
+                                <span>Min 13°</span> / <span>Max 24°</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- كارت 5: Lille -->
+                    <div class="city-card">
+                        <div class="card-top">
+                            <div>
+                                <h3>Lille</h3>
+                                <span class="region">Hauts-de-France</span>
+                            </div>
+                            <span class="material-icons star-icon">star_border</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="weather-info">
+                                <span class="material-icons weather-icon">cloud</span>
+                                <div class="temp-display">
+                                    <span class="temp">14°C</span>
+                                </div>
+                            </div>
+                            <p class="desc">Nuageux</p>
+                            <div class="min-max">
+                                <span>Min 9°</span> / <span>Max 17°</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- كارت 6: Nice -->
+                    <div class="city-card">
+                        <div class="card-top">
+                            <div>
+                                <h3>Nice</h3>
+                                <span class="region">Provence-Alpes-Côte d'Azur</span>
+                            </div>
+                            <span class="material-icons star-icon">star_border</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="weather-info">
+                                <span class="material-icons weather-icon sun-color">wb_sunny</span>
+                                <div class="temp-display">
+                                    <span class="temp">23°C</span>
+                                </div>
+                            </div>
+                            <p class="desc">Ensoleillé</p>
+                            <div class="min-max">
+                                <span>Min 17°</span> / <span>Max 27°</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- العمود الأيمن: تفاصيل مدينة باريس وتوقعات 5 أيام -->
+            <div class="sidebar-column">
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <div>
+                            <h3>Paris</h3>
+                            <span class="region">Île-de-France</span>
+                        </div>
+                        <span class="material-icons star-icon">star_border</span>
+                    </div>
+
+                    <div class="detail-main-info">
+                        <span class="material-icons detail-main-icon">wb_cloudy</span>
+                        <div class="detail-temp-box">
+                            <span class="big-temp">18°C</span>
+                            <span class="weather-status">Peu nuageux</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-stats">
+                        <div class="stat-row">
+                            <span><span class="material-icons">water_drop</span> Humidité</span>
+                            <strong>62%</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span><span class="material-icons">air</span> Vent</span>
+                            <strong>15 km/h</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span><span class="material-icons">wb_sunny</span> Lever du soleil</span>
+                            <strong>06:53</strong>
+                        </div>
+                        <div class="stat-row">
+                            <span><span class="material-icons">nights_stay</span> Coucher du soleil</span>
+                            <strong>20:48</strong>
+                        </div>
+                    </div>
+
+                    <div class="forecast-section">
+                        <h4>Prévisions sur 5 jours</h4>
+                        <div class="forecast-list">
+                            <div class="forecast-item">
+                                <span>Lun</span>
+                                <span class="material-icons sun-color">wb_sunny</span>
+                                <strong>12° / 21°</strong>
+                            </div>
+                            <div class="forecast-item">
+                                <span>Mar</span>
+                                <span class="material-icons">wb_cloudy</span>
+                                <strong>11° / 20°</strong>
+                            </div>
+                            <div class="forecast-item">
+                                <span>Mer</span>
+                                <span class="material-icons">cloud</span>
+                                <strong>13° / 19°</strong>
+                            </div>
+                            <div class="forecast-item">
+                                <span>Jeu</span>
+                                <span class="material-icons rain-color">grain</span>
+                                <strong>12° / 18°</strong>
+                            </div>
+                            <div class="forecast-item">
+                                <span>Ven</span>
+                                <span class="material-icons sun-color">wb_sunny</span>
+                                <strong>10° / 17°</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </main>
 
-        <div class="weather-card">
-            <span>☁️</span>
-            <h3>Bordeaux</h3>
-            <h2>16°C</h2>
-            <p>Cloudy</p>
+    <!-- الفوتر السفلي -->
+    <footer class="footer">
+        <div class="footer-left">
+            <span>&copy; 2026 FyourM. Tous droits réservés.</span>
         </div>
-
-        <div class="weather-card">
-            <span>🌤️</span>
-            <h3>Nice</h3>
-            <h2>22°C</h2>
-            <p>Partly Cloudy</p>
+        <div class="footer-center">
+            <span class="material-icons heart-icon">favorite</span>
+            <span>FyourM</span>
+            <span>|</span>
+            <span>Données météo en temps réel</span>
+            <span class="flag-icon">🇫🇷</span>
         </div>
-
-        <div class="weather-card">
-            <span>🌧️</span>
-            <h3>Lille</h3>
-            <h2>12°C</h2>
-            <p>Rainy</p>
+        <div class="footer-right">
+            <span>Propulsé par <strong style="color:#fff;">V</strong> Vue.js + <strong style="color:#fff;">⚡</strong> Vite</span>
         </div>
-
-    </div>
-
-</section>
-
-<footer id="about">
-    <h2>FYOURM<span>.</span></h2>
-    <p>Premium Weather Experience © 2026</p>
-</footer>
+    </footer>
 
 </body>
-</html
-kkkk
+</html>
