@@ -37,33 +37,66 @@
     <!-- المحتوى الرئيسي -->
     <main class="main-container">
         
-    <!-- قسم الترحيب (Hero Section) -->
-<section class="hero-section">
-    <div class="hero-content">
-        <h1>La météo en France</h1>
-        <p>Découvrez la météo actuelle et les prévisions de toutes les villes françaises.</p>
-        
-        <!-- 1. نموذج البحث مع زر الفاليديشن -->
-        <form class="search-form" action="#" method="GET">
-            <div class="search-box">
-                <span class="material-icons">search</span>
-                <input type="text" name="city" placeholder="Rechercher une ville...">
-                <button type="submit" class="search-btn">
-                    <span class="material-icons">arrow_forward</span>
-                </button>
+        <!-- قسم الترحيب (Hero Section) -->
+        <section class="hero-section">
+            <div class="hero-content">
+                
+                <!-- 1. شارة تنبيه حالة الطقس المباشرة -->
+                <div class="weather-alert">
+                    <span class="pulse-dot"></span>
+                    <span class="material-icons alert-icon">warning_amber</span>
+                    <p><strong>Alerte Météo :</strong> Vents forts prévus sur la côte Méditerranéenne aujourd'hui.</p>
+                </div>
+
+                <h1>La météo en France</h1>
+                <p>Découvrez la météo actuelle et les prévisions de toutes les villes françaises.</p>
+                
+                <!-- 2. نموذج البحث مع زر الإدخال -->
+                <form class="search-form" action="#" method="GET">
+                    <div class="search-box">
+                        <span class="material-icons">search</span>
+                        <input type="text" name="city" placeholder="Rechercher une ville...">
+                        <button type="submit" class="search-btn">
+                            <span class="material-icons">arrow_forward</span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- 3. وسوم التصفية السريعة -->
+                <div class="quick-chips">
+                    <button class="chip active">Toutes</button>
+                    <button class="chip">Paris</button>
+                    <button class="chip">Marseille</button>
+                    <button class="chip">Côte d'Azur</button>
+                </div>
+
+                <!-- 4. شريط الإحصائيات السريعة -->
+                <div class="stats-strip">
+                    <div class="stat-card">
+                        <span class="material-icons">thermostat</span>
+                        <div>
+                            <span class="stat-value">18.5°C</span>
+                            <span class="stat-label">Moyenne Nationale</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="material-icons sun-color">wb_sunny</span>
+                        <div>
+                            <span class="stat-value">27°C (Nice)</span>
+                            <span class="stat-label">Plus Chaude</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="material-icons rain-color">ac_unit</span>
+                        <div>
+                            <span class="stat-value">9°C (Lille)</span>
+                            <span class="stat-label">Plus Froide</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </form>
-
-        <!-- 2. وسوم التصفية السريعة (Quick Chips) -->
-        <div class="quick-chips">
-            <button class="chip active">Toutes</button>
-            <button class="chip">Paris</button>
-            <button class="chip">Marseille</button>
-            <button class="chip">Côte d'Azur</button>
-        </div>
-
-    </div>
-</section>
+        </section>
 
         <!-- شبكة المحتوى (المدن واللوحة الجانبية) -->
         <div class="content-grid">
