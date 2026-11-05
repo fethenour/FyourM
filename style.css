@@ -125,13 +125,17 @@ body {
     margin-bottom: 25px;
 }
 
+/* Form fi Box barbaacha sirreeffame */
+.search-form {
+    max-width: 450px;
+}
+
 .search-box {
     display: flex;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 25px;
-    padding: 10px 20px;
-    max-width: 450px;
+    padding: 6px 8px 6px 18px;
     gap: 10px;
 }
 
@@ -147,6 +151,31 @@ body {
     color: #0f172a;
     font-size: 14px;
     width: 100%;
+}
+
+/* Qabduu Barbaacha/Validate Haaraa (Search Button) */
+.search-btn {
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.search-btn:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+}
+
+.search-btn .material-icons {
+    color: #ffffff !important;
+    font-size: 18px;
 }
 
 /* التنسيق العام للتخطيط (Grid) */
