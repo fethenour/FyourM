@@ -1,0 +1,296 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080D18;
+    color: white;
+}
+
+/* NAVBAR */
+
+.navbar {
+    height: 85px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #080D18;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span,
+footer span {
+    color: #E63946;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #BBC5D5;
+    text-decoration: none;
+    font-size: 13px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #E63946;
+}
+
+.nav-btn {
+    padding: 12px 23px;
+    background: #E63946;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background-image:
+        url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=2000");
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(5,10,20,.97),
+        rgba(5,10,20,.65),
+        rgba(5,10,20,.25)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.tag {
+    color: #E63946;
+    letter-spacing: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.2;
+    margin: 25px 0;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #70B7FF;
+}
+
+.hero-content p {
+    color: #C3CCDA;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.main-btn {
+    display: inline-block;
+    background: #E63946;
+    color: white;
+    padding: 16px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.main-btn:hover {
+    background: #B82030;
+    transform: translateY(-3px);
+}
+
+.location {
+    position: absolute;
+    z-index: 2;
+    right: 10%;
+    bottom: 55px;
+    text-align: right;
+}
+
+.location span {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #70B7FF;
+}
+
+.location h2 {
+    font-size: 55px;
+    margin: 8px 0;
+}
+
+.location p {
+    color: #CCD5E3;
+}
+
+/* WEATHER */
+
+.weather-section {
+    padding: 100px 10%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title span {
+    color: #E63946;
+    letter-spacing: 4px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+.section-title h2 b {
+    color: #70B7FF;
+}
+
+.section-title p {
+    color: #8796AC;
+    font-size: 14px;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.weather-card {
+    background: linear-gradient(145deg, #14243D, #0C1526);
+    border: 1px solid #253B5B;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: .3s;
+}
+
+.weather-card:hover {
+    transform: translateY(-8px);
+    border-color: #E63946;
+}
+
+.weather-card span {
+    font-size: 38px;
+}
+
+.weather-card h3 {
+    margin-top: 18px;
+    color: #BBCBE1;
+    font-size: 17px;
+}
+
+.weather-card h2 {
+    font-size: 35px;
+    margin: 12px 0;
+    color: #70B7FF;
+}
+
+.weather-card p {
+    color: #899CB8;
+    font-size: 13px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #050912;
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #1D2C42;
+}
+
+footer h2 {
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #8492A8;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 650px;
+        padding: 0 7%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .location {
+        right: 7%;
+        bottom: 25px;
+    }
+
+    .weather-section {
+        padding: 70px 6%;
+    }
+
+    .weather-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 450px) {
+    .weather-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-btn {
+        padding: 10px 13px;
+    }
+}
