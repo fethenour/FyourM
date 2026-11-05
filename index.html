@@ -37,27 +37,33 @@
     <!-- المحتوى الرئيسي -->
     <main class="main-container">
         
- <!-- قسم الترحيب (Hero Section) -->
-    <section class="hero-section">
+    <!-- قسم الترحيب (Hero Section) -->
+<section class="hero-section">
     <div class="hero-content">
         <h1>La météo en France</h1>
         <p>Découvrez la météo actuelle et les prévisions de toutes les villes françaises.</p>
         
-        <!-- هنا يوضع نموذج البحث المُنظّم مع الزر -->
+        <!-- 1. نموذج البحث مع زر الفاليديشن -->
         <form class="search-form" action="#" method="GET">
             <div class="search-box">
                 <span class="material-icons">search</span>
                 <input type="text" name="city" placeholder="Rechercher une ville...">
-                
-                <!-- زر الفاليديشن -->
                 <button type="submit" class="search-btn">
                     <span class="material-icons">arrow_forward</span>
                 </button>
             </div>
         </form>
 
+        <!-- 2. وسوم التصفية السريعة (Quick Chips) -->
+        <div class="quick-chips">
+            <button class="chip active">Toutes</button>
+            <button class="chip">Paris</button>
+            <button class="chip">Marseille</button>
+            <button class="chip">Côte d'Azur</button>
+        </div>
+
     </div>
-    </section>
+</section>
 
         <!-- شبكة المحتوى (المدن واللوحة الجانبية) -->
         <div class="content-grid">
